@@ -4,8 +4,9 @@ import socket
 import time
 
 app = Flask(__name__)
-ipList = ["instance-w.web-server-1.com", "instance-w.web-server-1.com", "instance-w.web-server-1.com", "instance-w.web-server-1.com"]
-localhost = socket.gethostname() #socket.gethostbyname(socket.gethostname())
+ipList = [socket.gethostbyname("instance-x.web-server-1.com"), socket.gethostbyname("instance-y.web-server-1.com")]
+#[socket.gethostbyname("instance-w.web-server-1.com"), socket.gethostbyname("instance-x.web-server-1.com"), socket.gethostbyname("instance-y.web-server-1.com"), socket.gethostbyname("instance-z.web-server-1.com")]
+localhost = socket.gethostbyname(socket.gethostname())
 ipList.remove(localhost)
 
 @app.route('/')
