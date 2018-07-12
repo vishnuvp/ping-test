@@ -4,7 +4,7 @@ import socket
 import time
 
 app = Flask(__name__)
-ipList = [socket.gethostbyname("instance-x.web-server-1.com"), socket.gethostbyname("instance-y.web-server-1.com")]
+ipList = [socket.gethostbyname("instance-x.web-server-1.com"), socket.gethostbyname("instance-y.web-server-1.com")	]
 #[socket.gethostbyname("instance-w.web-server-1.com"), socket.gethostbyname("instance-x.web-server-1.com"), socket.gethostbyname("instance-y.web-server-1.com"), socket.gethostbyname("instance-z.web-server-1.com")]
 localhost = socket.gethostbyname(socket.gethostname())
 ipList.remove(localhost)
@@ -21,7 +21,8 @@ def hello_world():
 	            return_text += '<div>' + ip.split('.')[0] + " ..... Unreachable</div>"
 	    else:
 	            return_text += '<div>' + ip.split('.')[0] + " ..... Unreachable</div>"
-    return return_text
+	return_text += "</body></html>"
+	return return_text
 
 if __name__ == '__main__':
    app.run(host="0.0.0.0", debug=True)
