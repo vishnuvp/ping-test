@@ -18,11 +18,11 @@ def hello_world():
 	    res = subprocess.Popen(['ping', '-c', '3', ip],stdout=subprocess.PIPE)
 	    stdout, stderr = res.communicate()
 	    if res.returncode == 0:
-	            return_text += '<div>' + ip.split('.')[0] + " ..... Connected</div>"
+	            return_text += '<div>' + ipDict[ip] + " ..... Connected</div>"
 	    elif res.returncode == 2:
-	            return_text += '<div>' + ip.split('.')[0] + " ..... Unreachable</div>"
+	            return_text += '<div>' + ipDict[ip] + " ..... Unreachable</div>"
 	    else:
-	            return_text += '<div>' + ip.split('.')[0] + " ..... Unreachable</div>"
+	            return_text += '<div>' + ipDict[ip] + " ..... Unreachable</div>"
 	return_text += "</body></html>"
 	return return_text
 
