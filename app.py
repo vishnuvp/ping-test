@@ -4,7 +4,9 @@ import socket
 import time
 
 app = Flask(__name__)
-ipList = [socket.gethostbyname("instance-x.web-server-1.com"), socket.gethostbyname("instance-y.web-server-1.com")	]
+
+ipDict = {socket.gethostbyname("instance-x.web-server-1.com"): "instance-x.web-server-1.com", socket.gethostbyname("instance-y.web-server-1.com"):  "instance-y.web-server-1.com"}
+ipList = list(ipDict.keys())
 #[socket.gethostbyname("instance-w.web-server-1.com"), socket.gethostbyname("instance-x.web-server-1.com"), socket.gethostbyname("instance-y.web-server-1.com"), socket.gethostbyname("instance-z.web-server-1.com")]
 localhost = socket.gethostbyname(socket.gethostname())
 ipList.remove(localhost)
