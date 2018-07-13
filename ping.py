@@ -3,7 +3,7 @@ import socket
 import time
 import os
 
-ipDict = {socket.gethostbyname("instance-w.web-server-1.com"): "instance-w.web-server-1.com", socket.gethostbyname("instance-x.web-server-1.com"): "instance-x.web-server-1.com", socket$
+ipDict = {socket.gethostbyname("instance-w.web-server-1.com"): "instance-w.web-server-1.com", socket.gethostbyname("instance-x.web-server-1.com"): "instance-x.web-server-1.com", socket.gethostbyname("instance-y.web-server-1.com"):  "instance-y.web-server-1.com", socket.gethostbyname("instance-z.web-server-1.com"):  "instance-z.web-server-1.com"}
 ipList = list(ipDict.keys())
 #[socket.gethostbyname("instance-w.web-server-1.com"), socket.gethostbyname("instance-x.web-server-1.com"), socket.gethostbyname("instance-y.web-server-1.com"), socket.gethostbyname("i$
 localhost = socket.gethostbyname(socket.gethostname())
